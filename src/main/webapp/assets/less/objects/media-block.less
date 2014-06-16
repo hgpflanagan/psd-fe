@@ -1,0 +1,42 @@
+.block {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.block-text {
+  margin-top:@space-half;
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+.block-text-primary {
+  margin:0;
+}
+.block-text-secondary {
+  color: @gray;
+  .type-scale(-1);
+  margin:0;
+}
+.block-caption{
+  .type-scale(-2);
+  color: @gray-dark;
+}
+.block-credit {
+  .type-scale(-2);
+}
+
+.block-text-right {
+  &:extend(.block);
+  .clearfix();
+
+  .block-media {
+    float:left;
+    margin-right: @space;
+    width: auto;
+  }
+
+  .block-text {
+    &:extend(.block-text);
+    width: auto;
+  }
+}

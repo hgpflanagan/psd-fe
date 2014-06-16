@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 .label {
+  .label-variant(@white, @gray-dark-4);
   display: inline;
   padding: @space-quarter @space-half @space-quarter;
   .type-scale(-1, "tight");
@@ -36,11 +37,6 @@
 
 // Colors
 // Contextual variations (linked labels reverse text color and bg when :hover)
-
-.label-default {
-  .label-variant(@white, @gray-dark-4);
-}
-
 .label-primary {
   .label-variant(@white, @brand-primary);
 }

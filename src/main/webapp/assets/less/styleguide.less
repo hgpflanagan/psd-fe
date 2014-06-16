@@ -1,7 +1,129 @@
 /* This file has the site LESS but also some extra styles for styleguide presentation */
 @import "site.less";
 
-.page-header {
+/* Styles for main documentation section */
+.container {
+    background:@white;
+}
+.docs-page-header {
   border-bottom:@border-style-2;
   padding:@space 0;
 }
+.docs-section {
+    ul {
+        &:extend(.list all);
+    }
+}
+.docs-section-header {
+    .type-scale(3);
+}
+.docs-section-subhead {
+    .type-scale(0);
+}
+.docs-example {
+  position: relative;
+  padding: @space-quad @space @space @space;
+  margin: 0 0 @space;
+  background-color: @gray-light-1;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  border: @border-style-1;
+
+  &.inverse {
+    background-color: @black;
+  }
+}
+/* Echo out a label for the example */
+.docs-example:after {
+  content: "Example";
+  position: absolute;
+  top:  @space;
+  left: @space;
+  font-weight: bold;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.docs-table {
+    &:extend(.table all);
+}
+
+
+
+
+
+/* Styles to present individual examples with a better look */
+
+/* provides visual spacing examples */
+.space {
+    border-top: @border-style-2;
+    border-bottom: @border-style-2;
+}
+.docs-space-quarter {
+    &:extend(.space);
+    height: @space-quarter;
+}
+.docs-space-half {
+    &:extend(.space);
+    height: @space-half;
+}
+.docs-space-three-quarter {
+    &:extend(.space);
+    height: @space-three-quarter;
+}
+.docs-space {
+    &:extend(.space);
+    height: @space;
+}
+.docs-space-and-half {
+    &:extend(.space);
+    height: @space-and-half;
+}
+.docs-space-double {
+    &:extend(.space);
+    height: @space-double;
+}
+.docs-space-triple {
+    &:extend(.space);
+    height: @space-triple;
+}
+.docs-space-quad {
+    &:extend(.space);
+    height: @space-quad;
+}
+
+
+/* borders */
+.docs-border-style {
+    width:100px;
+    height:100px;
+}
+.docs-border-style-1 {
+    &:extend(.docs-border-style);
+    border:@border-style-1;
+    background: @white;
+}
+.docs-border-style-2 {
+    &:extend(.docs-border-style);
+    border:@border-style-2;
+}
+.docs-border-style-3 {
+    &:extend(.docs-border-style);
+    border:@border-style-3;
+}
+.docs-border-style-4 {
+    &:extend(.docs-border-style);
+    border:@border-style-4;
+}
+
+
+/* blocks */
+.docs-block {
+  &:extend(.block all);
+  margin-bottom:@space;
+}
+.docs-block-text-right {
+  &:extend(.block-text-right all);
+  margin-bottom:@space;
+}
+
