@@ -20,7 +20,10 @@
 
 <div class="docs-section">
     <h2 class="docs-section-header" id="">Some Styling rules to live by</h2>
-
+    <ul>
+      <li><strong>Everything needs to be named</strong><p>If it has a purpose, name it with that purpose. Each styled element should be named. </p></li>
+      <li><strong>No more than 1 class name in the DOM per element</strong><p>This should be done in the LESS with extends instead</p></li>
+      <li><strong>Do not nest your LESS more than 1 level in oder to get around naming something correctly</strong><p>Nesting in LESS has a purpose. It is to create modifiers. Do not create so many modifiers as to get confusing, and do not create modifiers when something should be extended instead.</p></li>
 </div>
 
 
