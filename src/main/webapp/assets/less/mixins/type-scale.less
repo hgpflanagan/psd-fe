@@ -1,0 +1,56 @@
+// Type Scale
+// -------------------------
+// type scale with line-height options.
+// Example: .type-scale(1, [even, tight]);
+.type-scale(@scale; @lh-variant: "default") {
+  .font-size() when (@scale < 0) {
+    @font-size: "ts-neg@{scale}";
+    @lh: "ts-neg@{scale}-lh";
+
+    font-size: @@font-size;
+    .line-height(@@font-size);
+  }
+
+  .font-size() when (@scale >= 0) {
+    @font-size: "ts-@{scale}";
+    @lh: "ts-@{scale}-lh";
+
+    font-size: @@font-size;
+    .line-height(@@font-size);
+  }
+
+  .line-height(@font-size) when (@lh-variant = "default") {
+    line-height: unit((@@lh / @font-size));
+  }
+
+  .line-height(@font-size) when (@lh-variant = "tight") {
+    @lh-tight: "@{lh}-tight";
+    line-height: unit((@@lh-tight / @font-size));
+  }
+
+  .line-height(@font-size) when (@lh-variant = "even") {
+    line-height: 1;
+  }
+
+  // Kick it off
+  .font-size();
+}
+
+// Generate a set of type scale classes using the .type-scale() mixin. Maps to type scale variables.
+// Example: To generate a scale for -2 through 7, '.generate-ts(-2, 7)'
+.make-type-scale(@i, @max) when (@i =< @max) {
+  .ts(@i) when (@i < 0) {
+    .ts-neg@{i} {
+      .type-scale(@i);
+    }
+  }
+
+  .ts(@i) when (@i >= 0) {
+    .ts-@{i} {
+      .type-scale(@i);
+    }
+  }
+
+  .ts(@i);
+  .make-type-scale((@i + 1), @max);
+}

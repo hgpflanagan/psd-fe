@@ -1,0 +1,44 @@
+//
+// Basic Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: @space-and-half;
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+.list-large {
+  .type-scale(1);
+  font-weight: @font-weight-xl;
+}
+
+.list-small {
+  .type-scale(-1);
+}
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list(@bulletColor:@gray-dark-2;) {
+  li {
+    padding-left: @space;
+    position: relative;
+  }
+
+  & li:before {
+    content: '\2022'; // bullet
+    color: @bulletColor;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.list {
+  .list();
+}

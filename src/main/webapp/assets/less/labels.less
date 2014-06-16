@@ -1,0 +1,55 @@
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  display: inline;
+  padding: @space-quarter @space-half @space-quarter;
+  .type-scale(-1, "tight");
+  font-weight: normal;
+  color: @label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  
+  // Add hover effects, but only for links
+  &[href] {
+    &:hover,
+    &:focus {
+      color: @label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels reverse text color and bg when :hover)
+
+.label-default {
+  .label-variant(@white, @gray-dark-4);
+}
+
+.label-primary {
+  .label-variant(@white, @brand-primary);
+}
+
+.label-secondary {
+  .label-variant(@white, @brand-accent-2);
+}
+
+.label-inverse {
+  .label-variant(@black, @white);
+}
+

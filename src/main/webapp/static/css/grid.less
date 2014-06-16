@@ -1,0 +1,161 @@
+.article-layout {
+    display: -dari-grid;
+    -dari-grid-template: ". content . right .";                 
+ 
+    -dari-grid-definition-columns: 1fr 700px 60px 390px 1fr;
+    -dari-grid-definition-rows: auto;
+
+    padding: 10px;
+    
+    }
+
+    @media only screen and (min-width: 750px) and (max-width:980px) {
+    .article-layout {
+        display: -dari-grid;
+        -dari-grid-template: ". content ."
+                             ".  right  .";
+     
+        -dari-grid-definition-columns: 10px 760px 10px;
+        -dari-grid-definition-rows: auto auto;
+        padding: 10px;
+        
+    }
+}
+    @media only screen and (min-width: 300px) and (max-width:700px) {
+    .article-layout {
+        display: -dari-grid;
+        -dari-grid-template: ". content ."
+                             ".  right  .";
+     
+        -dari-grid-definition-columns: 10px 360px 10px;
+        -dari-grid-definition-rows: auto auto;
+        padding: 10px;
+        
+    }
+}
+
+
+.news-page-layout {
+    display: -dari-grid;
+    -dari-grid-template: ".  newsModules  .";
+ 
+    -dari-grid-definition-columns: 1fr 1150px 1fr;
+    -dari-grid-definition-rows: auto;
+}
+    @media only screen and (min-width: 300px) and (max-width:700px) {
+    .news-page-layout  {
+        display: -dari-grid;
+        -dari-grid-template: ".  newsModules  .";
+     
+        -dari-grid-definition-columns: 20px 360px 20px;
+        -dari-grid-definition-rows: auto;
+
+        padding: 10px;
+
+    }
+
+
+}
+
+.grid-one {
+    display: -dari-grid;
+    -dari-grid-template:
+        "0 . 1 . 2"
+        "0 . . . ."
+        "0 . 3 . 4";
+
+    -dari-grid-definition-columns: 370px 20px 370px 20px 370px;
+    -dari-grid-definition-rows: 200px 10px 200px;
+    -dari-grid-contexts: 0 grid-one-tall 1 grid-one-small 2 grid-one-small 3 grid-one-small 4 grid-one-small;
+
+}
+    @media only screen and (min-width: 300px) and (max-width:700px) {
+    .grid-one  {
+        display: -dari-grid;
+        -dari-grid-template: "0 0 0"
+                             "1 . 2"
+                             "3 . 4";
+     
+        -dari-grid-definition-columns: 165px 10px 165px;
+        -dari-grid-definition-rows: auto 100px 100px;
+
+        padding: 10px;
+    }
+
+}
+.grid-two {
+    display: -dari-grid;
+    -dari-grid-template:
+        "0 0 . 1"
+        "0 0 . ."
+        "0 0 . 2";
+
+    -dari-grid-definition-columns: 380px 380px 20px 370px;
+    -dari-grid-definition-rows: 200px 10px 200px;
+    -dari-grid-contexts: 0 grid-two-large 1 grid-two-small 2 grid-two-small;
+}
+
+    @media only screen and (min-width: 300px) and (max-width:700px) {
+    .grid-two  {
+        display: -dari-grid;
+        -dari-grid-template: "0"
+                             "1"
+                             "2";
+     
+        -dari-grid-definition-columns: 360px;
+        -dari-grid-definition-rows: auto auto auto;
+
+        padding: 10px;
+    }
+}
+
+.grid-2-modules {
+    display: -dari-grid;
+    -dari-grid-template:
+        "0 . 1";
+
+    -dari-grid-definition-columns: 567px 16px 567px;
+    -dari-grid-definition-rows: auto;
+    -dari-grid-contexts: 0 grid-2-modules 1 grid-2-modules;
+}
+
+    @media only screen and (min-width: 300px) and (max-width:700px) {
+    .grid-2-modules  {
+        display: -dari-grid;
+        -dari-grid-template: "0"
+                             "1";
+     
+        -dari-grid-definition-columns: 360px;
+        -dari-grid-definition-rows: auto auto;
+
+        padding: 10px;
+    }
+
+}
+
+
+.grid-3-modules {
+    display: -dari-grid;
+    -dari-grid-template:
+        "0 . 1 . 2";
+
+    -dari-grid-definition-columns: 371px 18px 371px 18px 371px;
+    -dari-grid-definition-rows: auto;
+    -dari-grid-contexts: 0 grid-3-modules 1 grid-3-modules 2 grid-3-modules;
+}
+
+    @media only screen and (min-width: 300px) and (max-width:700px) {
+    .grid-3-modules  {
+        display: -dari-grid;
+        -dari-grid-template: "0"
+                             "1"
+                             "2";
+     
+        -dari-grid-definition-columns: 360px;
+        -dari-grid-definition-rows: auto auto auto;
+
+        padding: 10px;
+    }
+
+
+}

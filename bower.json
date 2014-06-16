@@ -1,0 +1,10 @@
+{
+  "name": "brightstrap",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jquery"    : "1.10.2",
+    "modernizr" : "2.7.1",
+    "requirejs" : "2.1.9",
+    "less"      : "1.7.0"
+  }
+}

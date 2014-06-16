@@ -1,0 +1,171 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Headings
+// -------------------------
+
+h1 {
+  .type-scale(4);
+  margin: 0 0 @space-half;
+}
+h2 {
+  .type-scale(3);
+  margin: 0 0 @space-half;
+}
+h3 {
+  .type-scale(2);
+  margin: 0 0 @space-half;
+}
+h4 {
+  .type-scale(0);
+  margin: 0 0 @space-half;
+}
+h5 {
+  .type-scale(-1);
+  margin: 0 0 @space-half;
+}
+h6 {
+  .type-scale(-1);
+  margin: @space-half 0;
+}
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 @space-half;
+}
+
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: 14px base font * 85% = about 12px
+small,
+.small  { .type-scale(-1); }
+
+// Undo browser default styling
+cite    { font-style: normal; }
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+
+.active > a {
+  font-weight: @font-weight-bold;
+  pointer-events: none;
+}
+
+.disabled {
+  color: @gray-light-3;
+}
+
+ul > ul {
+  margin-left: @space-quarter;
+  margin-bottom: 0;
+}
+
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+  padding: (@line-height-computed / 2) @line-height-computed;
+  margin: 0 0 @line-height-computed;
+  font-size: @blockquote-font-size;
+  border-left: 5px solid @blockquote-border-color;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Note: Deprecated small and .small as of v3.1.0
+  // Context: https://github.com/twbs/bootstrap/issues/11660
+  footer,
+  small,
+  .small {
+    display: block;
+    font-size: 80%; // back to default font-size
+    line-height: @line-height-base;
+    color: @blockquote-small-color;
+
+    &:before {
+      content: '\2014 \00A0'; // em dash, nbsp
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before { content: ''; }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Quotes
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+address {
+  margin-bottom: @line-height-computed;
+  font-style: normal;
+  line-height: @line-height-base;
+}
+
+// Font Weights
+.font-weight {
+  &-xl {
+    font-weight: @font-weight-xl;
+  }
+  &-light {
+    font-weight: @font-weight-light;
+  }
+  &-book {
+    font-weight: @font-weight-book;
+  }
+  &-bold {
+    font-weight: @font-weight-bold;
+  }
+}
+
+// Generate static type scale classes
+.make-type-scale(@ts-low, @ts-high);

@@ -1,0 +1,20 @@
+.DS_Store
+
+# Maven
+target
+/target/
+/app-archetype/target/
+/db/target/
+/docs/documentation/_site/*
+/tool-ui/target/
+/doc
+
+# Grunt build
+build
+dist
+node
+node_modules
+now
+
+# Bower
+bower_components/
