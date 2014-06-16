@@ -1,6 +1,6 @@
 <%@include file="header.jsp" %>
 
-<h1 class="docs-page-header">Atoms</h1>
+<h1 class="docs-page-header">Elements</h1>
 
 <div class="docs-section">
     <h2 class="docs-section-header" id="grid">Grid</h1>
