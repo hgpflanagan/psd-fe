@@ -6,6 +6,7 @@
     background:@white;
 }
 .docs-page-header {
+  &:extend(.header1);
   border-bottom:@border-style-2;
   padding:@space 0;
 }
@@ -15,10 +16,10 @@
     }
 }
 .docs-section-header {
-    .type-scale(3);
+    &:extend(.header3);
 }
 .docs-section-subhead {
-    .type-scale(0);
+    &:extend(.header4);
 }
 .docs-example {
   position: relative;
