@@ -9,7 +9,7 @@
 
 <div class="docs-section">
     <h2 class="docs-section-header" id="">Elements</h1>
-    <p>Elements are our basic building blocks of the site. These are the HTML tags and basic structure of the site. The inputs, the lists, the typography. The styles for these elements are defined in the root of our LESS folder. They aren't terribly useful on their own, but they do have properties, some basic styles, and are mostly used and built upon in Objects. For the most part, these elemental properties shouldn't be used verbatim on the site, but should really be mixing or LESS extended onto objects. Think of these are private variables and mixins to be used in other objects. </p>
+    <p>Elements are our basic building blocks of the site. These are the HTML tags and basic structure of the site. The inputs, the lists, the typography. The styles for these elements are defined in the root of our LESS folder. They aren't terribly useful on their own, but they do have properties, some basic styles, and are mostly used and built upon in bbjects. For the most part, these elemental properties shouldn't be used verbatim on the site, but should really be mixing or LESS extended onto objects. Think of these are private variables and mixins to be used in other objects. </p>
 </div>
 
 <div class="docs-section">
@@ -23,8 +23,64 @@
     <ul class="docs-simple-list">
       <li><strong>Everything needs to be named</strong><p>If it has a purpose, name it with that purpose. Each styled element should be named. While we are used to styling elements like an "a", we should instead be calling it what it is, and extending the link styling onto it via LESS.</p></li>
       <li><strong>No more than 1 class name in the DOM per element</strong><p>This should be done in the LESS with extends instead. We have a class for ".header2", but your element is actually a ".article-header". Extend the ".header2" class onto your element in the LESS vs just putting a ".header2" class on your article header.</p></li>
-      <li><strong>Do not nest your LESS more than 1 level in oder to get around naming something correctly</strong><p>Nesting in LESS has a purpose. It is to create modifiers. Do not create so many modifiers as to get confusing, and do not create modifiers when something should be extended instead. Since we are explicitly naming things, we do not need to nest for specificity. This way things are easier to find, and you don't cascase styles as much as extend styles, so it's easy to see where your styles come from vs not really knowing. </p></li>
+      <li><strong>Do not nest your LESS more than 1 level in order to get around naming something correctly</strong><p>Nesting in LESS has a purpose. It is to create modifiers. Do not create so many modifiers as to get confusing, and do not create modifiers when something should be extended instead. Since we are explicitly naming things, we do not need to nest for specificity. This way things are easier to find, and you don't cascase styles as much as extend styles, so it's easy to see where your styles come from vs not really knowing. </p></li>
+    </ul>
 </div>
 
+<div class="docs-section">
+    <h2 class="docs-section-header" id="">Class and File naming Conventions</h2>
+    <p>While some basics around coding syntax were listed <a href="index.jsp">on the Getting Started page</a>, but not around what to actually call the classes. We wanted to put some guidelines in place so when objects are named, they are easy for all developers (BE, FE, etc) to find, locate, and figure out.</p>
+    <p>The template to follow for class names should be "namespace-objectType-fieldType".</p>
+    <ul class="docs-simple-list">
+        <li><strong>Namespace</strong><p>The namespace is an optional part of the class name, and necessary if that level of specificity is needed on a particular site of project.</p></li>
+        <li><strong>Object Type</strong><p>The object type should be the next part of the CSS class name. This object type should have a relationship with a JSP renderer, an object in Brightspot, and a LESS file in the project. This will make it really easy to know when working on a JSP, where the styles for that object reside.</p></li>
+        <li><strong>Field Type</strong><p>The field type should be the last part of the CSS class name. This is the field in the particular object, for example, the Title, or Description, etc etc.
+    </ul>
+    <p>Some examples of good class names would be "<strong>article-title</strong>", "<strong>article-subhead</strong>", "<strong>article-author</strong>".</p>
+</div>
+
+<div class="docs-section">
+    <h2 class="docs-section-header" id="">More about LESS extend</h2>
+    <p>Now that we are going to be using "extend" throughout the LESS, it's important to understand how it works, and how the CSS actually gets written. <a href="http://lesscss.org/features/#extend-feature" target="_blank">Some basic documentation is available on the LESS site,</a> but it's not quite clear on what the "all" options does. That option is important, as it allows the extended class to inherit all the rules of the original class, including any children classes or placements of that class inside of another. Without "all", only the base class will be used for the extension. Check out the example below:</p>
+
+<pre class="docs-code-css">
+// Without all:
+<strong>LESS</strong>
+.module {
+    color: red;
+    .bar {
+        color:purple
+    }
+}
+.rightRail .module {
+    color: green;
+}
+.fooModule {
+    &:extend(.module);
+}
+
+<strong>Compiled CSS</strong>
+.module, .fooModule { color: red; }
+.module .bar {color: purple; }
+.rightRail .module { color: green; }
+
+
+// With all:
+<strong>LESS</strong>
+.module {
+    color: red;
+}
+.fooModule {
+    &:extend(.module all);
+}
+.rightRail .module {
+    color: green;
+}
+
+<strong>Compiled CSS</strong>
+.module, .fooModule { color: red; }
+.module .bar, fooModule .bar { color: purple; }
+.rightRail .module, .rightRail .fooModule { color: green; }
+</pre>
 
 <%@include file="footer.jsp" %>

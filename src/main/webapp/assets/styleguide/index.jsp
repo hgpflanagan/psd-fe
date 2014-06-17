@@ -35,7 +35,7 @@
     <h3 class="docs-section-subhead">All</h3>
     <ul class="docs-simple-list">
         <li>spaces instead of tabs</li>
-        <li>2 spaces for indentation</li>
+        <li>2 spaces for indentation for CSS and JS, 4 spaces for JSP and Java</li>
     </ul>
 
     <h3 class="docs-section-subhead">CSS</h3>

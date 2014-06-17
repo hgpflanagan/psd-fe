@@ -3,14 +3,13 @@
 
 /* Styles for main documentation section */
 .docs-container {
-    &:extend(.container);
+    &:extend(.container all);
 
     background:@white;
 }
 
 .docs-nav-list {
   &:extend(.list-inline all);
-
   margin:0;
 
   > li {
@@ -27,16 +26,20 @@
   padding: @space;
 }
 
-.docs-simple-list {
-  &:extend(.list all);
+.docs-section {
+    margin-bottom:@space-double;
 }
-
 .docs-section-header {
   &:extend(.header3);
 }
 
 .docs-section-subhead {
   &:extend(.header4);
+}
+
+.docs-simple-list {
+  &:extend(.list all);
+  margin-left:@space;
 }
 
 .docs-example {
@@ -60,6 +63,11 @@
   }
 }
 
+.docs-code-css {
+    &:extend(.docs-example);
+    padding: @space;
+}
+
 .docs-table {
     &:extend(.table all);
 }
@@ -76,13 +84,17 @@
 .docs-space {
     border-top: @border-style-2;
     border-bottom: @border-style-2;
+
+    .asdf {
+      background:black;
+    }
 }
 .docs-space-quarter {
     &:extend(.docs-space);
     height: @space-quarter;
 }
 .docs-space-half {
-    &:extend(.docs-space);
+    &:extend(.docs-space all);
     height: @space-half;
 }
 .docs-space-three-quarter {

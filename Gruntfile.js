@@ -141,6 +141,10 @@ module.exports = function (grunt) {
         files: [{
           src: projectRoot + '/less/site.less',
           dest: projectRoot + '/dist/css/site.min.css'
+        },
+        {
+          src: projectRoot + '/less/styleguide.less',
+          dest: projectRoot + '/dist/css/styleguide.min.css'
         }],
         options: {
           compress: true,
