@@ -19,13 +19,12 @@
 </div>
 
 <div class="docs-section">
-    <h2 class="docs-section-header" id="">Some Styling rules to live by</h2>
-    <ul>
-      <li><strong>Everything needs to be named</strong><p>If it has a purpose, name it with that purpose. Each styled element should be named. </p></li>
-      <li><strong>No more than 1 class name in the DOM per element</strong><p>This should be done in the LESS with extends instead</p></li>
-      <li><strong>Do not nest your LESS more than 1 level in oder to get around naming something correctly</strong><p>Nesting in LESS has a purpose. It is to create modifiers. Do not create so many modifiers as to get confusing, and do not create modifiers when something should be extended instead.</p></li>
+    <h2 class="docs-section-header" id="">Some simple rules to live by</h2>
+    <ul class="docs-simple-list">
+      <li><strong>Everything needs to be named</strong><p>If it has a purpose, name it with that purpose. Each styled element should be named. While we are used to styling elements like an "a", we should instead be calling it what it is, and extending the link styling onto it via LESS.</p></li>
+      <li><strong>No more than 1 class name in the DOM per element</strong><p>This should be done in the LESS with extends instead. We have a class for ".header2", but your element is actually a ".article-header". Extend the ".header2" class onto your element in the LESS vs just putting a ".header2" class on your article header.</p></li>
+      <li><strong>Do not nest your LESS more than 1 level in oder to get around naming something correctly</strong><p>Nesting in LESS has a purpose. It is to create modifiers. Do not create so many modifiers as to get confusing, and do not create modifiers when something should be extended instead. Since we are explicitly naming things, we do not need to nest for specificity. This way things are easier to find, and you don't cascase styles as much as extend styles, so it's easy to see where your styles come from vs not really knowing. </p></li>
 </div>
-
 
 
 <%@include file="footer.jsp" %>

@@ -23,7 +23,7 @@
 
 <div class="docs-section">
     <h2 class="docs-section-header" id="JS Framework">JS Framework</h1>
-    <p>Since different sites and user interfaces have different JS needs, we do not try to specify exactly how you should setup your own application JS. Instead, we provide a format to create and use Brightspot (and other AMD) modules and plugins. Most of our sites do not need a JS framework to handle MVC, as that is provided by Brightspot and the JS is only responsible for view interactions, and not the data, or rendering. <a href="https://github.com/perfectsense/brightspot-js-utils/blob/master/PLUGIN.md" target="_blank">The Brightspot Plugin</a> allows your JS plugins to be installed, instantiated, and executed against the part of the DOM to which your plugin belongs. A plugin can be something as small as piece of JS that interacts with a form element to expand inputs, or as large as an entire slideshow or gallery.</p>
+    <p>Since different sites and user interfaces have different JS needs, we do not try to specify exactly how you should setup your own application JS. Instead, we provide a format to create and use Brightspot (and other AMD) and plugins. Most of our sites do not need a JS framework to handle MVC, as that is provided by Brightspot and the JS is only responsible for view interactions, and not the data, or rendering. <a href="https://github.com/perfectsense/brightspot-js-utils/blob/master/PLUGIN.md" target="_blank">The Brightspot Plugin</a> allows your JS plugins to be installed, instantiated, and executed against the part of the DOM to which your plugin belongs. A plugin can be something as small as piece of JS that interacts with a form element to expand inputs, or as large as an entire slideshow or gallery.</p>
 </div>
 
 <div class="docs-section">
@@ -32,22 +32,22 @@
 
     <p>It may also be helpful to install a JSHint/JSLint plugin and that will honor the .jshintrc file at the root of the -view folders. The Grunt build will catch them after the fact during a build, therefore you can break the build if you don't adhere to the linter's config.</p>
 
-    <h3>All</h3>
-    <ul>
+    <h3 class="docs-section-subhead">All</h3>
+    <ul class="docs-simple-list">
         <li>spaces instead of tabs</li>
         <li>2 spaces for indentation</li>
     </ul>
 
-    <h3>CSS</h3>
-    <ul>
+    <h3 class="docs-section-subhead">CSS</h3>
+    <ul class="docs-simple-list">
         <li>train-case for classnames</li>
         <li>property and value should have a single space separating them. eg {color: red}, not {color:red}</li>
         <li>commenting should follow the pattern that Bootstrap uses</li>
         <li>further conventions describing class name patterns are on the <a href="css.jsp">CSS page</a></li>
     </ul>
 
-    <h3>JS</h3>
-    <ul>
+    <h3 class="docs-section-subhead">JS</h3>
+    <ul class="docs-simple-list">
         <li>camelCase for variable names and plugins</li>
         <li>commenting should follow <a href="http://usejsdoc.org/" target="_blank">JSDoc patterns</a></li>
     </ul>

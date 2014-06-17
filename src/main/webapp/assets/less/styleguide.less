@@ -2,25 +2,43 @@
 @import "site.less";
 
 /* Styles for main documentation section */
-.container {
+.docs-container {
+    &:extend(.container);
+
     background:@white;
 }
+
+.docs-nav-list {
+  &:extend(.list-inline all);
+
+  margin:0;
+
+  > li {
+    padding: @space @space-double @space 0;
+  }
+}
+
 .docs-page-header {
-  &:extend(.header1);
-  border-bottom:@border-style-2;
-  padding:@space 0;
+  &:extend(.header2);
+
+  background: @brand-primary;
+  color: @white;
+  margin:0 -(@grid-gutter-width / 2) @space;
+  padding: @space;
 }
-.docs-section {
-    ul {
-        &:extend(.list all);
-    }
+
+.docs-simple-list {
+  &:extend(.list all);
 }
+
 .docs-section-header {
-    &:extend(.header3);
+  &:extend(.header3);
 }
+
 .docs-section-subhead {
-    &:extend(.header4);
+  &:extend(.header4);
 }
+
 .docs-example {
   position: relative;
   padding: @space-quad @space @space @space;
@@ -29,20 +47,17 @@
   box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
   border: @border-style-1;
 
-  &.inverse {
-    background-color: @black;
+  /* Echo out a label for the example */
+  &:after {
+    content: "Example";
+    position: absolute;
+    top:  @space;
+    left: @space;
+    font-weight: bold;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
-}
-/* Echo out a label for the example */
-.docs-example:after {
-  content: "Example";
-  position: absolute;
-  top:  @space;
-  left: @space;
-  font-weight: bold;
-  color: #bbb;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .docs-table {
@@ -53,43 +68,45 @@
 
 
 
+
+
 /* Styles to present individual examples with a better look */
 
 /* provides visual spacing examples */
-.space {
+.docs-space {
     border-top: @border-style-2;
     border-bottom: @border-style-2;
 }
 .docs-space-quarter {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-quarter;
 }
 .docs-space-half {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-half;
 }
 .docs-space-three-quarter {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-three-quarter;
 }
 .docs-space {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space;
 }
 .docs-space-and-half {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-and-half;
 }
 .docs-space-double {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-double;
 }
 .docs-space-triple {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-triple;
 }
 .docs-space-quad {
-    &:extend(.space);
+    &:extend(.docs-space);
     height: @space-quad;
 }
 

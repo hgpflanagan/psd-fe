@@ -5,9 +5,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['build']);
 
   // builds the project
-  // grunt.registerTask('build', ['bowercopy', 'clean', 'jshint', 'requirejs', 'concat:before', 'concat:scripts', 'uglify', 'less', 'copy']);
-
-  grunt.registerTask('build', ['bowercopy', 'clean']);
+  grunt.registerTask('build', ['bowercopy', 'clean', 'jshint', 'requirejs', 'concat:before', 'concat:scripts', 'uglify', 'less', 'copy']);
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -37,29 +35,7 @@ module.exports = function (grunt) {
     concat: {
       before: {
         src: [
-          projectRoot + '/js/vendor/modernizr-2.7.1.js',
-
-          // Support for legacy HGTV header/footer
-          projectRoot + '/js/sni/hgtv-config-prod.js',
-          projectRoot + '/js/sni/jquery-1.4.2.min.js',
-          projectRoot + '/js/sni/sni-util.js',
-          projectRoot + '/js/sni/sni-metadata.js',
-          projectRoot + '/js/sni/sni-ads-core.js',
-          projectRoot + '/js/sni/sni-urlite.js',
-          projectRoot + '/js/sni/sni-community.js',
-          projectRoot + '/js/sni/sni-dynads.js',
-          projectRoot + '/js/sni/autocomplete.js',
-          projectRoot + '/js/sni/userIntent.js',
-          projectRoot + '/js/sni/sni-omniture.js',
-          projectRoot + '/js/sni/sni-nielsen.js',
-          projectRoot + '/js/sni/strings.js',
-          projectRoot + '/js/sni/community.js',
-          projectRoot + '/js/sni/appconfig.js',
-          projectRoot + '/js/sni/globalheader.js',
-          projectRoot + '/js/sni/globalfooter.js',
-          projectRoot + '/js/sni/ads.js',
-          projectRoot + '/js/sni/hgtv-nielsen.js',
-          projectRoot + '/js/sni/omniture.js'
+          projectRoot + '/js/vendor/modernizr.js',
         ],
         dest: projectRoot + '/build/before.js',
         nonull: true
@@ -138,12 +114,9 @@ module.exports = function (grunt) {
       ],
       options: {
         jshintrc: '.jshintrc',
-        /* ignore the legacy SNI code and vendor scripts in core and HGTV */
+        /* ignore vendor scripts */
         ignores: [
-          projectRoot + '/js/core/text.js',
-          projectRoot + '/js/core/vendor/**/*.js',
-          projectRoot + '/js/vendor/**/*.js',
-          projectRoot + '/js/sni/*.js',
+          projectRoot + '/js/vendor/**/*.js'
         ]
       }
     },
@@ -151,7 +124,7 @@ module.exports = function (grunt) {
     requirejs: {
       all: {
         options: {
-          name: 'vendor/require-2.1.9',
+          name: 'vendor/require',
           include: 'main',
           baseUrl: projectRoot + '/js/',
           mainConfigFile: projectRoot + '/js/main.js',
@@ -199,9 +172,8 @@ module.exports = function (grunt) {
           'vendor/jquery.js'   : 'jquery/jquery.js',
           'vendor/modernizr.js': 'modernizr/modernizr.js',
           'vendor/require.js'  : 'requirejs/require.js',
-          'vendor/less.js'     : 'less/dist/less-1.7.0.js'
-
-
+          'vendor/less.js'     : 'less/dist/less-1.7.0.js',
+          'vendor/bsp-utils.js': 'bsp-utils/bsp-utils.js'
         }
       }
     }

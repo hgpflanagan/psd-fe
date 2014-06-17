@@ -5,6 +5,7 @@
     "jquery"    : "1.10.2",
     "modernizr" : "2.7.1",
     "requirejs" : "2.1.9",
-    "less"      : "1.7.0"
+    "less"      : "1.7.0",
+    "bsp-utils" : "2.0.1"
   }
 }

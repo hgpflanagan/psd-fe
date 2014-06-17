@@ -1,0 +1,30 @@
+{
+  "asi"      : true,
+  "boss"     : true,
+  "browser"  : true,
+  "debug"    : true,
+  "devel"    : true,
+  "eqeqeq"   : false,
+  "eqnull"   : true,
+  "expr"     : true,
+  "latedef"  : true,
+  "laxbreak" : true,
+  "loopfunc" : true,
+  "predef": [
+              "psd",
+              "define",
+              "Modernizr",
+              "module",
+              "require",
+              "console",
+              "alert",
+              "unescape",
+              "History",
+              "jQuery"
+            ],
+  "noarg"    : true,
+  "quotmark" : "single",
+  "smarttabs": true,
+  "undef": true,
+  "validthis": true
+}

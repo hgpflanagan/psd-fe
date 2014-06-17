@@ -16,6 +16,18 @@
 
     <link rel="stylesheet/less" type="text/css" href="/assets/less/styleguide.less"/>
     <script src="/assets/js/vendor/less.js" type="text/javascript"></script>
+
+    <script data-main="/assets/js/main.js" src="/assets/js/vendor/require.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="docs-container">
+      <div class="docs-navigation">
+        <ul class="docs-nav-list">
+          <li><a href="index.jsp">Getting Started</a></li>
+          <li><a href="css.jsp">CSS</a></li>
+          <li><a href="js.jsp">JS</a></li>
+          <li><a href="elements.jsp">Elements</a></li>
+          <li><a href="objects.jsp">Objects</a></li>
+        </ul>
+      </div>
+      <div class="docs-content">

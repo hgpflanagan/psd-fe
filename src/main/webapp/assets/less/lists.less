@@ -8,7 +8,7 @@ ol {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
-  margin-bottom: @space-and-half;
+  margin-bottom: 0;
   ul,
   ol {
     margin-bottom: 0;
@@ -41,4 +41,19 @@ ol {
 
 .list {
   .list();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  margin-left: -5px;
+
+  ul {
+    .clearfix();
+  }
+
+  > li {
+    display: inline-block;
+    padding-left: (@space-quarter /2);
+    padding-right: (@space-quarter /2);
+  }
 }
