@@ -15,17 +15,11 @@
     map: {
       /** '*' means all modules will get 'jquery-private' for their 'jquery' dependency. */
       '*': {
-        'jquery': 'vendor/jquery-private',
+        'jquery': 'jquery-private',
       },
 
       /** 'jquery-private' wants the real jQuery module though. If this line was not here, there would be an unresolvable cyclic dependency. */
-      'vendor/jquery-private': { 'jquery': 'jquery' }
-    },
-
-    /** here we will specify simpler module names for vendor modules */
-    paths: {
-      'jquery'    : 'vendor/jquery',
-      'bsp-utils' : 'vendor/bsp-utils'
+      'jquery-private': { 'jquery': 'jquery' }
     },
 
     urlArgs: 'bust=' + (new Date()).getTime(),

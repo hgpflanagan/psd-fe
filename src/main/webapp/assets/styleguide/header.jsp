@@ -14,10 +14,10 @@
 
     %>
 
-    <link rel="stylesheet/less" type="text/css" href="/assets/less/styleguide.less"/>
-    <script src="/assets/js/vendor/less.js" type="text/javascript"></script>
+    <link rel="stylesheet/less" type="text/css" href="/assets/styles/styleguide.less"/>
+    <script src="/assets/js/less.js" type="text/javascript"></script>
 
-    <script data-main="/assets/js/main.js" src="/assets/js/vendor/require.js"></script>
+    <script data-main="/assets/js/main.js" src="/assets/js/require.js"></script>
   </head>
   <body>
     <div class="docs-container">
