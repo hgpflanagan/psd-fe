@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context allowLinking="true" crossContext="true" cachingAllowed="false">
+
+<WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+<!-- CMS Login Control -->
+<Environment name="cms/tool/isAutoCreateUser" override="true" type="java.lang.Boolean" value="true" />
+<Environment name="cookieSecret" type="java.lang.String" value="Deem2oenoot1Ree5veinu8" override="true" />
+
+<!-- Create Production Environment for CMS -->
+<!-- <Environment name="PRODUCTION" override="false" type="java.lang.Boolean" value="true" /> -->
+
+<!-- Add authentication for _debug tool -->
+<!-- <Environment name="dari/debugRealm" type="java.lang.String" value="DIRECT HOST NAME" override="false" />
+<Environment name="dari/debugUsername" type="java.lang.String" value="USERNAME" override="false" />
+<Environment name="dari/debugPassword" type="java.lang.String" value="PASSWORD" override="false" /> -->
+
+
+<!-- Default Database -->
+<Environment name="dari/defaultDatabase" type="java.lang.String" value="psd-fe" override="false" />
+<Environment name="dari/database/psd-fe/class" override="false" type="java.lang.String" value="com.psddev.dari.db.AggregateDatabase" />
+<Environment name="dari/database/psd-fe/defaultDelegate" override="false" type="java.lang.String" value="sql" />
+<Environment name="dari/database/psd-fe/delegate/sql/class" override="false" type="java.lang.String" value="com.psddev.dari.db.SqlDatabase" />
+
+<Resource name="dari/database/psd-fe/delegate/sql/dataSource"
+auth="Container" driverClassName="com.mysql.jdbc.Driver"
+logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000"
+type="javax.sql.DataSource"
+removeAbandoned="true" removeAbandonedTimeout="60"
+username="root" password=""
+url="jdbc:mysql://localhost:3306/psd-fe"
+testOnBorrow="true" validationQuery="SELECT 1"/>
+
+<!-- Solr Config -->
+<Environment name="solr/home" override="false" type="java.lang.String" value="./solr" />
+<Environment name="dari/database/psd-fe/delegate/solr/groups" override="false" type="java.lang.String" value="-* +cms.content.searchable" />
+<Environment name="dari/database/psd-fe/delegate/solr/class" override="false" type="java.lang.String" value="com.psddev.dari.db.SolrDatabase" />
+<Environment name="dari/database/psd-fe/delegate/solr/serverUrl" override="false" type="java.lang.String" value="http://localhost:8080/solr" />
+
+ <!-- DIMs -->
+<Environment name="dari/defaultImageEditor" override="false" type="java.lang.String" value="dims" />
+<Environment name="dari/imageEditor/dims/class" override="false" type="java.lang.String" value="com.psddev.dari.util.DimsImageEditor" />
+<Environment name="dari/imageEditor/dims/baseUrl" override="false" type="java.lang.String" value="http://psd.psddev.com/dims4/PSD" />
+<Environment name="dari/imageEditor/dims/sharedSecret" override="false" type="java.lang.String" value="PSD08" />
+<Environment name="dari/imageEditor/dims/quality" override="false" type="java.lang.Integer" value="90" />  
+ 
+ <!-- S3 Storage -->
+ <Environment name="dari/defaultStorage" type="java.lang.String" value="psdS3Dev" override="false" />
+
+<Environment name="dari/storage/psdS3Dev/class" override="false" type="java.lang.String" value="com.psddev.dari.util.AmazonStorageItem" />
+<Environment name="dari/storage/psdS3Dev/baseUrl" override="false" type="java.lang.String" value="http://cdn.psddev.com" />
+<Environment name="dari/storage/psdS3Dev/access" override="false" type="java.lang.String" value="AKIAIUYOZHZZK4C2OSDQ" />
+<Environment name="dari/storage/psdS3Dev/secret" override="false" type="java.lang.String" value="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" />
+<Environment name="dari/storage/psdS3Dev/bucket" override="false" type="java.lang.String" value="psddev" />
+
+
+</Context>
