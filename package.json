@@ -2,7 +2,7 @@
   "name": "psd-fe",
   "version": "0.1.0",
   "devDependencies": {
-     "bsp-grunt": "https://github.com/trhoppe/brightspot-js-grunt/tarball/d8451df1a525b1f5d0a3f45e358bee5e2c5cd685",
+     "bsp-grunt": "https://github.com/trhoppe/brightspot-js-grunt/tarball/cef657de1894341ea64e8ae172a3a89412a5edd8",
      "grunt-contrib-concat": "0.3.0"
   },
   "dependencies": {

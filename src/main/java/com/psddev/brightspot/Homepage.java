@@ -28,7 +28,6 @@ public class Homepage extends Content implements Singleton {
 	@ToolUi.Heading("Description Section")
 	private String sectionHeading;
 	@CollectionMaximum(3)
-	@CollectionMinimum(3)
 	private List<Article> promoArticles;
 
 	@ToolUi.Heading("Feature Section")
@@ -50,7 +49,7 @@ public class Homepage extends Content implements Singleton {
 	public String getHeaderTextColor(){
 		return headerTextColor;
 	}
-	
+
 	public void setHeaderTextColor(String headerTextColor){
 		this.headerTextColor = headerTextColor;
 	}
@@ -58,15 +57,15 @@ public class Homepage extends Content implements Singleton {
 	public String getHeaderColor(){
 		return headerColor;
 	}
-	
+
 	public void setHeaderColor(String headerColor){
 		this.headerColor = headerColor;
 	}
-	 
+
 	public List<Article> getPromoArticles(){
 		return promoArticles;
 	}
-	
+
 	public void setPromoArticles(List<Article> promoArticles){
 		this.promoArticles = promoArticles;
 	}
@@ -74,7 +73,7 @@ public class Homepage extends Content implements Singleton {
 	public String getNewSectionSubHeading(){
 		return newSectionSubHeading;
 	}
-	
+
 	public void setNewSectionSubHeading(String newSectionSubHeading){
 		this.newSectionSubHeading = newSectionSubHeading;
 	}
@@ -82,7 +81,7 @@ public class Homepage extends Content implements Singleton {
 	public String getNewSectionHeading(){
 		return newSectionHeading;
 	}
-	
+
 	public void setNewSectionHeading(String newSectionHeading){
 		this.newSectionHeading = newSectionHeading;
 	}
@@ -90,7 +89,7 @@ public class Homepage extends Content implements Singleton {
 	public Image getFeatureImage(){
 		return featureImage;
 	}
-	
+
 	public void setFeatureImage(Image featureImage){
 		this.featureImage = featureImage;
 	}
@@ -98,7 +97,7 @@ public class Homepage extends Content implements Singleton {
 	public List<ProductFeature> getNewProductFeatures(){
 		return newProductFeatures;
 	}
-	
+
 	public void setNewProductFeatures(List<ProductFeature> newProductFeatures){
 		this.newProductFeatures = newProductFeatures;
 	}
@@ -106,7 +105,7 @@ public class Homepage extends Content implements Singleton {
 	public String getSectionHeading(){
 		return sectionHeading;
 	}
-	
+
 	public void setSectionHeading(String sectionHeading){
 		this.sectionHeading = sectionHeading;
 	}
@@ -114,7 +113,7 @@ public class Homepage extends Content implements Singleton {
 	public Callouts getCallouts(){
 		return callouts;
 	}
-	
+
 	public void setCallouts(Callouts callouts){
 		this.callouts = callouts;
 	}
@@ -122,7 +121,7 @@ public class Homepage extends Content implements Singleton {
 	public Image getImage(){
 		return image;
 	}
-	
+
 	public void setImage(Image image){
 		this.image = image;
 	}
@@ -130,7 +129,7 @@ public class Homepage extends Content implements Singleton {
 	public String getSubTitle(){
 		return subTitle;
 	}
-	
+
 	public void setSubTitle(String subTitle){
 		this.subTitle = subTitle;
 	}
@@ -138,15 +137,15 @@ public class Homepage extends Content implements Singleton {
 	public String getTitle(){
 		return title;
 	}
-	
+
 	public void setTitle(String title){
 		this.title = title;
 	}
-	
+
 	public String getName(){
 		return name;
 	}
-	
+
 	public void setName(String name){
 		this.name = name;
 	}
@@ -159,11 +158,11 @@ public class Homepage extends Content implements Singleton {
 		private String rightHeading;
 		private String rightDescription;
 
-		 
+
 		public String getLeftHeading(){
 			return leftHeading;
 		}
-		
+
 		public void setLeftHeading(String leftHeading){
 			this.leftHeading = leftHeading;
 		}
@@ -171,11 +170,11 @@ public class Homepage extends Content implements Singleton {
 		public String getRightHeading(){
 			return rightHeading;
 		}
-		
+
 		public void setRightHeading(String rightHeading){
 			this.rightHeading = rightHeading;
 		}
-	 
+
 		public String getLeftDescription(){
 			return leftDescription;
 		}
@@ -184,7 +183,7 @@ public class Homepage extends Content implements Singleton {
 			this.leftDescription = leftDescription;
 		}
 
-		 
+
 		public String getRightDescription(){
 			return rightDescription;
 		}
@@ -201,12 +200,12 @@ public class Homepage extends Content implements Singleton {
 		private String title;
 		@ToolUi.RichText
 		private String description;
-		
+
 
 		public String getTitle(){
 			return title;
 		}
-		
+
 		public void setTitle(String title){
 			this.title = title;
 		}
@@ -215,7 +214,7 @@ public class Homepage extends Content implements Singleton {
 		public String getDescription(){
 			return description;
 		}
-		
+
 		public void setDescription(String description){
 			this.description = description;
 		}

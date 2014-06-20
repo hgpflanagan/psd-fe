@@ -2,7 +2,8 @@
   "name": "psd-fe",
   "version": "0.0.1",
   "devDependencies": {
-    "jquery"    : "1.10.2",
-    "bsp-utils" : "2.0.1"
+    "jquery"                  :  "1.10.2",
+    "bsp-utils"               : "2.0.1",
+    "components-font-awesome" : "4.1.0"
   }
 }

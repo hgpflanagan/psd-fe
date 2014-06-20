@@ -48,7 +48,7 @@
   margin: 0 0 @space;
   background-color: @gray-light-1;
   box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-  border: @border-style-1;
+  border: @border-style-4;
 
   /* Echo out a label for the example */
   &:after {
@@ -56,16 +56,17 @@
     position: absolute;
     top:  @space;
     left: @space;
-    font-weight: bold;
     color: #bbb;
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    .type-scale(-1);
   }
 }
 
 .docs-code-css {
     &:extend(.docs-example);
     padding: @space;
+    .type-scale(-1);
 }
 
 .docs-table {
@@ -84,10 +85,7 @@
 .docs-space {
     border-top: @border-style-2;
     border-bottom: @border-style-2;
-
-    .asdf {
-      background:black;
-    }
+    height: @space;
 }
 .docs-space-quarter {
     &:extend(.docs-space);
@@ -100,10 +98,6 @@
 .docs-space-three-quarter {
     &:extend(.docs-space);
     height: @space-three-quarter;
-}
-.docs-space {
-    &:extend(.docs-space);
-    height: @space;
 }
 .docs-space-and-half {
     &:extend(.docs-space);

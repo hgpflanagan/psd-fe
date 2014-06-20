@@ -13,7 +13,7 @@
     </parent>
 
     <groupId>com.psddev</groupId>
-    <artifactId>brightspot</artifactId>
+    <artifactId>psd-fe</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 

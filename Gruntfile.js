@@ -6,16 +6,26 @@ module.exports = function(grunt) {
     bsp: {
 
       bower: {
-        'modernizr': [
-          'modernizr.js'
-        ]
+        'components-font-awesome':
+        [{
+          src:'less/*',
+          dest:'/assets/styles/font-awesome',
+          expand:true,
+          flatten: true
+        },
+        {
+          src:'fonts/*',
+          dest:'/assets/fonts',
+          expand:true,
+          flatten: true
+        }]
       },
 
       styles: {
-        dir: '/assets/styles',
+        dir: 'assets/styles',
           less: [
             'site.less',
-              'styleguide.less'
+            'styleguide.less'
           ]
       },
 
