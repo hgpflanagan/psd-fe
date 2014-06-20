@@ -20,9 +20,9 @@
     <script data-main="/assets/js/main.js" src="/assets/js/require.js"></script>
   </head>
   <body>
-    <div class="docs-container">
-      <div class="docs-navigation">
-        <ul class="docs-nav-list">
+    <div class="sg-container">
+      <div class="sg-navigation">
+        <ul class="sg-nav-list">
           <li><a href="index.jsp">Getting Started</a></li>
           <li><a href="css.jsp">CSS</a></li>
           <li><a href="js.jsp">JS</a></li>
@@ -30,4 +30,4 @@
           <li><a href="objects.jsp">Objects</a></li>
         </ul>
       </div>
-      <div class="docs-content">
+      <div class="sg-content">

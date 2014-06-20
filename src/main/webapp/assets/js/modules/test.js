@@ -27,7 +27,9 @@ define(function (require) {
             console.log('TEST: ----_each------------------');
             console.log('This gets called whenever the plugin is actually called PER ELEMENT. It gets passed the actual DOM element.');
             console.log(item);
-            console.log($(item).text());
+
+            $(item).text('Look at me, I\'m a test plugin!');
+
         },
 
         '_all': function(items) {

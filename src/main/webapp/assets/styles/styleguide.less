@@ -2,22 +2,32 @@
 @import "site.less";
 
 /* Styles for main documentation section */
-.docs-container {
+
+/*
+ * Extending the base container, but providing a modifier for a white background.
+ * We do not want to do .container { background:@white; } and just use that. This is the sg-container after all
+ */
+.sg-container {
     &:extend(.container all);
 
     background:@white;
 }
 
-.docs-nav-list {
+/*
+ * Another example where we name something by what it is. We could have done the "list-inline" style right in the DOM
+ * but then we are stuck with an inline list unless we change the DOM. This way, our styles are in the LESS where they belong
+ */
+.sg-nav-list {
   &:extend(.list-inline all);
   margin:0;
 
+  /* We are using a modifier on our object here. We don't need to define a class for each li */
   > li {
     padding: @space @space-double @space 0;
   }
 }
 
-.docs-page-header {
+.sg-page-header {
   &:extend(.header2);
 
   background: @brand-primary;
@@ -26,23 +36,23 @@
   padding: @space;
 }
 
-.docs-section {
+.sg-section {
     margin-bottom:@space-double;
 }
-.docs-section-header {
+.sg-section-header {
   &:extend(.header3);
 }
 
-.docs-section-subhead {
+.sg-section-subhead {
   &:extend(.header4);
 }
 
-.docs-simple-list {
+.sg-simple-list {
   &:extend(.list all);
   margin-left:@space;
 }
 
-.docs-example {
+.sg-example {
   position: relative;
   padding: @space-quad @space @space @space;
   margin: 0 0 @space;
@@ -63,13 +73,13 @@
   }
 }
 
-.docs-code-css {
-    &:extend(.docs-example);
+.sg-code-css {
+    &:extend(.sg-example);
     padding: @space;
     .type-scale(-1);
 }
 
-.docs-table {
+.sg-table {
     &:extend(.table all);
 }
 
@@ -82,71 +92,71 @@
 /* Styles to present individual examples with a better look */
 
 /* provides visual spacing examples */
-.docs-space {
+.sg-space {
     border-top: @border-style-2;
     border-bottom: @border-style-2;
     height: @space;
 }
-.docs-space-quarter {
-    &:extend(.docs-space);
+.sg-space-quarter {
+    &:extend(.sg-space);
     height: @space-quarter;
 }
-.docs-space-half {
-    &:extend(.docs-space all);
+.sg-space-half {
+    &:extend(.sg-space all);
     height: @space-half;
 }
-.docs-space-three-quarter {
-    &:extend(.docs-space);
+.sg-space-three-quarter {
+    &:extend(.sg-space);
     height: @space-three-quarter;
 }
-.docs-space-and-half {
-    &:extend(.docs-space);
+.sg-space-and-half {
+    &:extend(.sg-space);
     height: @space-and-half;
 }
-.docs-space-double {
-    &:extend(.docs-space);
+.sg-space-double {
+    &:extend(.sg-space);
     height: @space-double;
 }
-.docs-space-triple {
-    &:extend(.docs-space);
+.sg-space-triple {
+    &:extend(.sg-space);
     height: @space-triple;
 }
-.docs-space-quad {
-    &:extend(.docs-space);
+.sg-space-quad {
+    &:extend(.sg-space);
     height: @space-quad;
 }
 
 
 /* borders */
-.docs-border-style {
+.sg-border-style {
     width:100px;
     height:100px;
 }
-.docs-border-style-1 {
-    &:extend(.docs-border-style);
+.sg-border-style-1 {
+    &:extend(.sg-border-style);
     border:@border-style-1;
     background: @white;
 }
-.docs-border-style-2 {
-    &:extend(.docs-border-style);
+.sg-border-style-2 {
+    &:extend(.sg-border-style);
     border:@border-style-2;
 }
-.docs-border-style-3 {
-    &:extend(.docs-border-style);
+.sg-border-style-3 {
+    &:extend(.sg-border-style);
     border:@border-style-3;
 }
-.docs-border-style-4 {
-    &:extend(.docs-border-style);
+.sg-border-style-4 {
+    &:extend(.sg-border-style);
     border:@border-style-4;
 }
 
 
 /* blocks */
-.docs-block {
+.sg-block {
   &:extend(.block all);
   margin-bottom:@space;
 }
-.docs-block-text-right {
+.sg-block-text-right {
   &:extend(.block-text-right all);
   margin-bottom:@space;
 }
