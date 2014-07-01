@@ -46,8 +46,8 @@
 
     <p>We provided documentation inside the test plugin located in js/modules/test.js. To see the test plugin in action, open your console</p>
 
-    <div class="sg-hs-module" data-namespace-testPlugin></div>
-    <div class="sg-hs-module" data-namespace-testPlugin></div>
+    <div class="sg-hs-module bsp-plugin" data-plugin-name="test" data-plugin-namespace="namespace"></div>
+    <div class="sg-hs-module" data-namespace-test2></div>
 </div>
 
 

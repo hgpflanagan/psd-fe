@@ -7,7 +7,8 @@
 define(function (require) {
   'use strict';
 
-  var test        = require('modules/test');
+  var test         = require('modules/test'),
+      test2        = require('modules/test2');
 
   return this;
 });

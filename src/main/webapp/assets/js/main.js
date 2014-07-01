@@ -31,7 +31,13 @@
 
     var $         = require('jquery'),
         mediator  = require('mediator'),
-        modules   = require('modules');
+        modules   = require('modules'),
+        bsp_utils = require('bsp-utils');
+
+    bsp_utils.findPlugins({
+      pluginSelector:'.bsp-plugin',
+      pluginDirectory: 'modules/'
+    })
 
   });
 }());
