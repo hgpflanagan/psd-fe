@@ -23,10 +23,11 @@ module.exports = function(grunt) {
 
       styles: {
         dir: 'assets/styles',
-          less: [
+        less: [
             'site.less',
             'styleguide.less'
-          ]
+        ],
+        autoprefixer: false
       },
 
       scripts: {
