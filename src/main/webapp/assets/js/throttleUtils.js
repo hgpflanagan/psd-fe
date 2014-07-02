@@ -7,6 +7,7 @@
         define(['jquery'], factory);
 
     } else {
+        // if we are not in AMD world, create or extend the bsp_utils namespace with these functions
         globals.bsp_utils = globals.bsp_utils || {};
         jQuery.extend(globals.bsp_utils,factory(globals.jQuery));
     }

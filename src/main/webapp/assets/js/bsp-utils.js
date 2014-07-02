@@ -3,11 +3,21 @@
         define(['jquery','domUtils'], factory);
 
     } else {
+        // if we are not in AMD world, create or extend the bsp_utils namespace with these functions
         globals.bsp_utils = globals.bsp_utils || {};
         jQuery.extend(globals.bsp_utils,factory(globals.jQuery, globals.bsp_utils));
     }
 
-})(this, function($, bsp_utils) {
+})(this, function($, domUtils) {
+
+    // either pulls in window.bsp_utils or creates a new object
+    // this object is used to allow this module to work as a non AMD module if bsp_utils
+    // is declared globally and dependency management is done through compiling JS together
+    var bsp_utils = window.bsp_utils || {};
+
+    // adds domUtils into the bsp_utils namespace
+    // dont really like this too much but this supports use in non AMD use cases
+    $.extend(bsp_utils,domUtils);
 
     // Defines a plugin.
     (function() {
