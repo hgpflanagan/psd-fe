@@ -1,11 +1,5 @@
 <%@include file="header.jsp" %>
 
-<!-- <script src="/assets/js/jquery.js"></script>
-<script src="/assets/js/throttleUtils.js"></script>
-<script src="/assets/js/domUtils.js"></script>
-<script src="/assets/js/bsp-utils.js"></script>
-<script src="/assets/js/modules/test.js"></script> -->
-
 <h1 class="sg-page-header">JS</h1>
 
 <div class="sg-section">

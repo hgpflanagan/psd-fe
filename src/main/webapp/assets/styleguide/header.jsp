@@ -15,7 +15,7 @@
     %>
 
     <link rel="stylesheet/less" type="text/css" href="/assets/styles/styleguide.less"/>
-    <script src="/assets/js/less.js"></script>
+    <script src="/assets/js/less.js" type="text/javascript"></script>
 
     <script data-main="/assets/js/main.js" src="/assets/js/require.js"></script>
   </head>
