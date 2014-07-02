@@ -1,10 +1,15 @@
-define(function (require) {
+(function(globals, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery','bsp-utils'], factory);
 
-    var $         = require('jquery'),
-        mediator  = require('mediator'),
-        bsp_utils = require('bsp-utils'),
+    } else {
+        globals.bsp_utils = globals.bsp_utils || {};
+        jQuery.extend(globals.bsp_utils,factory(globals.jQuery, globals.bsp_utils));
+    }
 
-    module = {
+})(this, function($, bsp_utils) {
+
+    var module = {
 
       '_install': function() {
             var plugin = this;
