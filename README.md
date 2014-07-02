@@ -1,4 +1,6 @@
-## Welcome to the Brightspot 101 Project
+## Welcome to the PSD FE Project
+
+This is where we will house the boilerplate front end framework with which to get started on projects. All the action is in the srm/main/webapp/assets/ folder, which includes LESS, JS, and some styleguide JSPs to get started. You can follow the instructions below to setup a local BSP instance with that assets folder, or you can just take the Gruntfile and assets directory and use it in your project.
 
 ### Introduction
 
