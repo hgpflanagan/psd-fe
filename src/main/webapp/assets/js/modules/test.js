@@ -1,15 +1,10 @@
-(function(globals, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['jquery','bspPlugin'], factory);
+define(function (require) {
 
-    } else {
-        globals.bsp_utils = globals.bsp_utils || {};
-        jQuery.extend(globals.bsp_utils,factory(globals.jQuery, globals.bsp_utils));
-    }
+    var $         = require('jquery'),
+        mediator  = require('mediator'),
+        bspPlugin = require('bspPlugin'),
 
-})(this, function($, bsp_utils) {
-
-    var module = {
+    module = {
 
       '_install': function() {
             var plugin = this;
@@ -25,6 +20,7 @@
             console.log('This gets called whenever the plugin is actually initialized by bsp-utils after document ready. This will get the DOM and the selector via which you could try to reference your module.');
             console.log(document);
             console.log(selector);
+            console.log(plugin);
         },
 
         '_each': function(item) {
@@ -45,6 +41,8 @@
         },
     };
 
-    return bsp_utils.plugin(false, 'namespace', 'testPlugin', module);
+    window.mediator = mediator;
+
+    return bspPlugin.plugin(mediator, 'namespace', 'testPlugin', module);
 
 });
