@@ -1,6 +1,6 @@
 (function(globals, factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['jquery','bsp-utils'], factory);
+        define(['jquery','bspPlugin'], factory);
 
     } else {
         globals.bsp_utils = globals.bsp_utils || {};

@@ -19,16 +19,15 @@
     // dont really like this too much but this supports use in non AMD use cases
     $.extend(bsp_utils,domUtils);
 
-    // Defines a plugin.
-    (function() {
+    var NOT_WHITE_RE = /\S+/g;
+    var OPTIONS_DATA_KEY = '_options';
 
-        var NOT_WHITE_RE = /\S+/g;
-        var OPTIONS_DATA_KEY = '_options';
+    var $d = $(document);
 
-        var $d = $(document);
+    var module = {
 
-        bsp_utils.plugin = function(globals, namespace, name, actions) {
-            var plugin = actions || { };
+      plugin:function(globals, namespace, name, actions) {
+        var plugin = actions || { };
 
             plugin._name = namespace + '_' + name;
 
@@ -200,8 +199,10 @@
             }
 
             return plugin;
-        };
-    })();
+      }
 
-    return bsp_utils;
+    }
+
+    return module;
+
 });
